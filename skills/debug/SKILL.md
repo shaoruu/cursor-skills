@@ -106,13 +106,25 @@ Replace `PORT` with the actual server port number.
 
 ## Workflow
 
+### Pre-Debug: Check Git Status
+
+Before starting, check if git is clean:
+
+```bash
+git status --porcelain
+```
+
+If the output is empty (no uncommitted changes), note this. After extensive debugging iterations, if the final fix is small, you can use `git checkout -- .` or `git restore .` to reset all instrumentation instantly instead of manually removing debug code. This is much faster than cleanup.
+
+### Steps
+
 1. **Start**: Run setup commands
 2. **Instrument**: Add logging calls at strategic points in the code
 3. **Clear logs**: Before asking for reproduction, always clear the log file (`> $LOG_FILE`)
 4. **Ask for reproduction**: Tell the user the steps to reproduce
 5. **Analyze**: Read the log file (`cat $LOG_FILE`) or start viewer if user asks
 6. **Iterate**: Add more logs if needed, remove red herrings
-7. **Cleanup**: Once bug is found, proceed to cleanup
+7. **Cleanup**: Once bug is found, proceed to cleanup (or use git reset if started clean)
 
 ## End of Message Reminder
 
