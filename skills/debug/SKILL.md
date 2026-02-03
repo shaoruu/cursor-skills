@@ -116,7 +116,9 @@ Replace `PORT` with the actual server port number.
 
 ## End of Message Reminder
 
-At the end of EVERY message during debugging, include:
+At the end of EVERY message during debugging, include reproduction steps and prompt for next action.
+
+**If in Cursor CLI (terminal-based):**
 
 ```
 ---
@@ -128,6 +130,14 @@ Reproduction steps:
 [A] Issue reproduced → continue debugging
 [B] Resolved → cleanup instrumentation
 ```
+
+**If in Cursor IDE (has AskQuestion tool):**
+
+Use the AskQuestion tool with:
+- Option A: "Issue reproduced - continue debugging"
+- Option B: "Resolved - cleanup instrumentation"
+- Option C: "Other (please specify)"
+- Allow freeform text input for additional context
 
 Update the reproduction steps as you learn more about how to trigger the bug.
 
