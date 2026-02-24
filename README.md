@@ -1,29 +1,27 @@
-# Cursor Skills
+# Shaoruu Cursor Skills Plugin
 
-A collection of skills for AI coding agents.
+`shaoruu-cursor-skills` is a Cursor plugin that bundles reusable skills for day-to-day agent workflows.
 
-## Installation
+## Included skills
+
+- `debug`: structured logging workflow for reproducible debugging sessions.
+- `cloud-agents`: API-driven workflows for launching, monitoring, and applying Cursor Cloud Agent changes.
+
+## Install as a Cursor plugin
+
+1. Open Cursor.
+2. Go to `Settings` -> `Plugins`.
+3. Install from GitHub using `https://github.com/shaoruu/cursor-skills`.
+
+Plugin layout follows the single-plugin structure documented at https://cursor.com/docs/plugins/building.
+
+## Legacy skill installer
+
+If you still use the standalone skills installer flow:
 
 ```bash
 npx skills add shaoruu/cursor-skills
 ```
-
-## Available Skills
-
-### debug
-
-Debug code by adding structured logging. Starts a local HTTP server for browser/remote logging and optionally a live log viewer.
-
-**Use when:**
-- Debugging issues or tracking down bugs
-- You say `/debug`
-- You need to log from browser-side code
-
-**Features:**
-- Unique session IDs to avoid log conflicts
-- HTTP server for browser-side logging (CORS enabled)
-- Live log viewer with auto-scroll and JSON pretty-printing
-- Multi-language support (Rust, Node.js, Python, etc.)
 
 ## License
 
