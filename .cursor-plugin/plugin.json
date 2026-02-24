@@ -1,0 +1,26 @@
+{
+  "name": "shaoruu-cursor-skills",
+  "displayName": "Shaoruu Cursor Skills",
+  "version": "1.0.0",
+  "description": "Cursor plugin that bundles debug and cloud-agents skills for local and cloud workflows.",
+  "author": {
+    "name": "shaoruu"
+  },
+  "homepage": "https://github.com/shaoruu/cursor-skills",
+  "repository": "https://github.com/shaoruu/cursor-skills",
+  "license": "MIT",
+  "keywords": [
+    "cursor",
+    "plugin",
+    "skills",
+    "debug",
+    "cloud-agents"
+  ],
+  "category": "developer-tools",
+  "tags": [
+    "skills",
+    "debugging",
+    "cloud-agents"
+  ],
+  "skills": "./skills/"
+}
